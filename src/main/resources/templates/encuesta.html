@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encuesta</title>
+</head>
+<body>
+
+<h2>Encuesta</h2>
+<form th:action="@{/encuesta}" th:object="${formulario}" method="post">
+    <div th:each="pregunta, iter : *{questions}">
+        <p><strong th:text="${pregunta.text}">Pregunta</strong></p>
+        <div th:each="opcion : ${pregunta.options}">
+            <input type="radio"
+                   th:field="*{questions[__${iter.index}__].selectedAnswer}"
+                   th:value="${opcion}"/>
+            <label th:text="${opcion}"></label><br/>
+        </div>
+        <br/>
+    </div>
+    <button type="submit">Enviar</button>
+</form>
+
+</body>
+</html>

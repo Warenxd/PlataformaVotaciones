@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class UserController {
 
-    @GetMapping("/view") //Seleccionamos la ruta, al acceder a esa url, mostrará la información
+    @GetMapping({"/view", "/"}) //Seleccionamos la ruta, al acceder a esa url, mostrará la información
                         // de este metodo.
     public String view(Model model){
         model.addAttribute("title", "PLATAFORMA DE VOTACIONES \"VOTASEGURO");
