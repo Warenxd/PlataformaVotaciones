@@ -19,7 +19,21 @@ public class EncuestaController {
         EncuestaFormulario formulario = new EncuestaFormulario();
 
         List<Question> questions = Arrays.asList(
-                askQuestion("Animal favorito", "Gato", "Perro", "Rogbailer", "Jose")
+                askQuestion("SELECCIONE PRESIDENTE ESTUDIANTIL",
+                        "Shrek", "Rick", "Pinocho", "Copito"),
+
+                askQuestion("SELECCIONE SECRETARIO ESTUDIANTL",
+                        "Jose", "Miguel", "Pedro", "Bernardo"),
+
+                askQuestion("SELECCIONE TESORERO ESTUDIANTIL",
+                        "Steve", "Mikaela", "Michael Jackson", "Giorgio Jackson"),
+
+                askQuestion("SELECCIONE PRIMER DELEGADO",
+                        "Brandon", "Manzana", "Uziel", "Pedro"),
+
+                askQuestion("SELECCIONE SEGUNDO DELEGADO",
+                        "Daniel", "Esteban", "Emilio", "Cristobal")
+
         );
         formulario.setQuestions(questions);
         model.addAttribute("formulario", formulario);
