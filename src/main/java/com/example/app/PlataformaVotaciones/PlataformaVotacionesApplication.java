@@ -9,5 +9,4 @@ public class PlataformaVotacionesApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PlataformaVotacionesApplication.class, args);
 	}
-
 }
